@@ -1,0 +1,24 @@
+<div style="max-height:400px;">
+    <p-table [value]="data.birthDeaths"  [scrollable]="true" scrollHeight="200px" class="datatable">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Birth Year</th>
+                <th>Death Year</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-data>
+            <tr>
+                <td >{{data.birth}}</td>
+                <td>{{data.death}}</td>
+               
+            </tr>
+        </ng-template>
+    </p-table>
+
+
+    <ng-template [ngIf]="data.popularYears.length == 1"><div style="text-align:center;">The year with the most people alive is {{data.popularYears.join('')}}</div></ng-template>
+<ng-template [ngIf]="data.popularYears.length > 1"><div style="text-align:center;">The {{data.popularYears.length}} years with the most people alive are {{data.popularYears.join(', ')}}</div></ng-template>
+</div>
+<div>
+    <p-chart type="bar" width="400" height="400" [data]="chart"></p-chart>
+</div>
