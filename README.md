@@ -36,4 +36,6 @@ Instructions:
 
 Once the repo is cloned, you can open and run the backend application as a command line application, this will start the server on port 8080.
 
-You can then open up the Front end application in any IDE you wish, I developed this in Visual Studio Code. From there you can either 'ng serve' to run the front end on port 4200. You can also (recommended) copy the dist folder after using 'ng build' to the executing folder (debug or release) of the back end server. This will allow the static files to be browsed from http://localhost:8080.
+You can then open up the Front end application in any IDE you wish, I developed this in Visual Studio Code. 
+The next step is to run 'npm install' this pulls down the node_modules from npm so that they can be used in the build process.
+From there you can either 'ng serve' to run the front end on port 4200. You can also (recommended) copy the dist folder after using 'ng build' to the executing folder (debug or release) of the back end server. This will allow the static files to be browsed from http://localhost:8080.
